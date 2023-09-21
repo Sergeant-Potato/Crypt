@@ -5,9 +5,9 @@ def __hasher(passwd: str, algo: str = "SHA256", rot: int=1):
 
     '''
         This script generates a 256 - Bit hash of a given text. It contains three (3) parameters:
-            -   passwd: This is the 'given text'; in the context of the function, it should be a readable plain - text 
+            -   password [password]: This is the 'given text'; in the context of the function, it should be a readable plain - text 
                 password, such as: Test123, Test#123 or MondaytoFriday.
-            -   algo: This is the hashing algorithm that is to be executed by this function. Only four (4) hashing functions are accepted:
+            -   algorithm [-ha]: This is the hashing algorithm that is to be executed by this function. Only four (4) hashing functions are accepted:
                 a.  SHA256: It is default value; as well, the current golden standard due to the security it provides and the speed in which
                     it hashes a text.
                 b.  SHA512-256: It is an alternative to the SHA256 golden standard; however, it takes a little more time to generate results. 
@@ -17,7 +17,7 @@ def __hasher(passwd: str, algo: str = "SHA256", rot: int=1):
                     default value for this program. It produces a 256 - Bit digest.
                 d.  SM3: This is a function standarized by the Chinese National Cryptography Administration. It produces a 256 - Bit digest. It is not
                     recomended to use this hashing algorithm.
-            -   rot: This is the number of rotations that the function will undertake on the password (initially plain - text and then hashed), to generate
+            -   rotations [-r]: This is the number of rotations that the function will undertake on the password (initially plain - text and then hashed), to generate
                 a final hashed text. It's default value is 1.
     '''
     algorithm = None
